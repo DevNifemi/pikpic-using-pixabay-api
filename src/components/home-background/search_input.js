@@ -38,7 +38,7 @@ const SearchInput = () => {
 
         <Link to={{pathname: "/image-result",
          state: {images}}}>
-          <Button className="bx bx-search-alt solid h-100 w-100"
+          <Button className="bx bx-search-alt solid"
             onClick={handleClick} to="image-result">
           </Button>
         </Link>

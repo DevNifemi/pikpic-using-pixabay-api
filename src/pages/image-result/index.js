@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ImageResultHeader from '../../components/image-result/image-header'
 import { Row, Col } from 'reactstrap';
 import {Card, CardImg} from "reactstrap";
-import {useLocation} from 'react-router-dom';
+// import {useLocation} from 'react-router-dom';
 
 
 const ImageResult = () => {
@@ -45,7 +45,7 @@ const ImageResult = () => {
        <ImageResultHeader/>
       {/* {imageListContent} */}
           <Row>
-    <Col md={{size:10,offset:1}} className="thumbnail-gallery">
+    <Col md={{size:10,offset:1}} className="thumbnail-gallery mt-4">
     <Row>
           {images.map(image => (
              <Col

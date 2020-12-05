@@ -10,11 +10,13 @@ export default class HomepageGallery extends Component {
   constructor() {
     super();
     this.state = {
-      images:[]
+      images:[],
+      imagesOnPage: 32
     };
   }
+
   componentDidMount(){
-      axios.get(`${apiUrl}/?key=${apiKey}&image_type=photo&per_page=52`)
+      axios.get(`${apiUrl}/?key=${apiKey}&image_type=photo&per_page=${this.state.imagesOnPage}`)
       .then(response => this.setState({images:response.data.hits}));
   }
 

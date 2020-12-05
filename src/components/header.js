@@ -17,10 +17,8 @@ const Header = (props) => {
   return (
     <React.Fragment>
       {/* Header goes here */}
-        <head>
             <title>Pik a pic</title>
             <link rel="icon" href="/logo_transparent.png" style={{height: 300}}/>
-        </head>
 
         {/* Navbar goes here */}
       <Navbar className="ml-3 mr-2" style={{backgroundColor: '#FFFFFF', height: '65px'}} light expand="md">
