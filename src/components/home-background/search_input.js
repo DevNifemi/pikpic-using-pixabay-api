@@ -24,7 +24,7 @@ const SearchInput = () => {
 
   // API FOR PICTURE IS BEING CALLED HERE
   const handleClick = (e) => {
-          axios.get(`${apiUrl }/?key=${apiKey}&q=${searchText}&image_type=${values}`)
+          axios.get(`${apiUrl }/?key=${apiKey}&q=${searchText}&image_type=${values}&per_page=100`)
           .then(response => setImages(response.data.hits))
           .catch(err => console.log(err ))
           localStorage.setItem('images', JSON.stringify( images ))
