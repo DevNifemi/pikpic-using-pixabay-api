@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+
+.hero {
+    /* background-image: url(https://res.cloudinary.com/nifemi/image/upload/v1605323723/bird-763769_1920_pcktfd.jpg); */
+    background-image: url(https://res.cloudinary.com/nifemi/image/upload/v1605323723/bird-763769_1920_pcktfd.jpg);
+    position: relative;
+    background-position: 50%;
+    background-size: cover;
+    background-color: #555;
+    margin: 0 0 20px;
+    text-align: center;
+    transition: .8s;
+    color: #ffffff;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.3);
+}
+
+.top{
+    position: relative;
+    padding: 250px 20px 5px;
+}
+
+.hero h1{
+    font-size: 50px;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.hero h2{
+    font-family: 'Rubik', sans-serif !important;
+    margin-bottom: -10px;
+    /* color: ; */
+}
+
+.search_form {
+    max-width: 1000px;
+    position: relative;
+    padding: 0 30px;
+    margin: 20px auto 50px;
+}
+
+
+
+.search_image{
+    width: 100% !important;
+    margin: 0;
+    padding: 18px 0px;
+    font: normal 16px Open Sans,sans-serif;
+}
+
+/* media query for home page image background */
+/* @media screen and (min-width: 1024px){
+    .hero
+    .search_form,
+    .hero h1,
+    .hero h2 {
+        max-width: 800px;
+    }
+} */
+
+/* @media screen and (min-width: 800px){
+    .hero .search_form, .hero h1, .hero h2 {
+        max-width: 600px;
+    }
+} */
+
+/* @media screen and (min-width: 568px){
+    .hero .search_form, .hero h1, .hero h2 {
+        max-width: 600px;
+    }
+} */
+
+/* SEARCH INPUT STYLING GOES HERE */
+.input_container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* flex-wrap: wrap; */
+}
+
