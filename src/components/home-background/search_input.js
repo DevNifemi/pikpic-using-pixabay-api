@@ -15,6 +15,11 @@ const SearchInput = () => {
   // handle the click for search inputs
   const handleTextChange = (e) => {
      setSearchText(e.target.value)
+     axios.get(`${apiUrl }/?key=${apiKey}&q=${searchText}&image_type=${values}&per_page=100`)
+      .then(response => setImages(response.data.hits))
+      .catch(err => console.log(err ))
+      console.log(`fetching ${images.length} for you`)
+
   }
 
   // handle the click for drop down change
@@ -24,10 +29,7 @@ const SearchInput = () => {
 
   // API FOR PICTURE IS BEING CALLED HERE
   const handleClick = (e) => {
-          axios.get(`${apiUrl }/?key=${apiKey}&q=${searchText}&image_type=${values}&per_page=100`)
-          .then(response => setImages(response.data.hits))
-          .catch(err => console.log(err ))
-          localStorage.setItem('images', JSON.stringify( images ))
+         
   }
 
 
@@ -38,6 +40,7 @@ const SearchInput = () => {
 
         <Link to={{pathname: "/image-result",
          state: {images}}}>
+           
           <Button className="bx bx-search-alt solid"
             onClick={handleClick} to="image-result">
           </Button>

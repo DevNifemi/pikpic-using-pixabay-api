@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SearchInput from '../../components/home-background/search_input'
+import styles from './img-header.module.css';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavbarText } from 'reactstrap';
 
 const ImageResultHeader = (props) => {
@@ -9,26 +10,24 @@ const ImageResultHeader = (props) => {
   return (
     <div>
       {/* Header goes here */}
-        <title>Pik a pic</title>
+        <title>Image Results</title>
         <link rel="icon" href="/logo_transparent.png"/>
 
         {/* Navbar goes here */}
-      <Navbar className="ml-3 mr-2 w-100" style={{backgroundColor: '#D3D3D3', height: '65px'}} light expand="md">
+      <Navbar style={{backgroundColor: '#D3D3D3'}} light expand="md">
 
-        <NavbarBrand className="hidden-sm" href="/">
-            <img className="hidden-sm" style={{width: 180, height: 150}} src="/logo_transparent.png" alt="header_logo"/>
+        <NavbarBrand style={{ height: '50px'}} className="mr-4" href="/">
+            <img style={{width: 100, height: 100, marginTop: '-30px'}} src="/logo_transparent.png" alt="logo"/>
         </NavbarBrand>
 
         <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
 
-            <Nav className="mr-auto" navbar>
-                <div style={{marginTop: '100px !important'}}> 
-                  <SearchInput style={{marginLeft: '100px !important'}} />
-                </div>
+            <Nav className={styles.nav} navbar>
+                <SearchInput />
             </Nav>
 
-            <NavbarText className="btn btn-dark btn-m text-white">Get more</NavbarText>
+            <NavbarText className={styles.button} >Get more</NavbarText>
           </Collapse>
       </Navbar>
 

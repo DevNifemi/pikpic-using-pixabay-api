@@ -1,11 +1,7 @@
 import React from "react";
-import {
-  Col,
-  Row,
-  Card,
-  CardImgOverlay,
-  CardImg,
-} from "reactstrap";
+import { CardImg } from "reactstrap";
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+
 
 
 class ReactstrapImageGallery extends React.Component{
@@ -14,29 +10,23 @@ class ReactstrapImageGallery extends React.Component{
   const images = this.props.images
 
   return( 
-    <Row>
-      <Col md={{size:10,offset:1}} className="thumbnail-gallery">
-        <Row>
-            {images.map((image, index) => (
-                <Col
-                  md="3"
-                  className="my-2"
-                  key={index}
-                  onClick={() => this.showModalImage(index)}
-                >
-                  <Card className="image-card overflow-hidden">
-                    <CardImg src={image.largeImageURL} />
-                      <CardImgOverlay className="hover:overlay">
-                          <i className="bx bx-heart solid white"></i>
-                      </CardImgOverlay>
-                  </Card>
-                </Col>
-            ))}
+    <div className="pt-2 pl-3 pr-3">
+      <ResponsiveMasonry  
+        columnsCountBreakPoints={{350: 2, 750: 2, 900: 4}}>
+          
+                <Masonry>
+                  {
+                    images.map((image, index) => (
+                      
+                    <CardImg key={index} className="p-1 d-block" src={image.largeImageURL} />
+                    ))
+                  }
+                </Masonry>
+               
+            </ResponsiveMasonry>
+    </div>
 
-          </Row>
-      </Col>
-    </Row>
-  )
+)
   }
 }
 

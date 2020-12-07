@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../../components/header';
+import Header from '../../components/header/header';
 import HomeBackground from '../../components/home-background';
 import HomepageGallery from '../../components/homepage-image-gallery/index';
 import { Link } from "react-router-dom";
