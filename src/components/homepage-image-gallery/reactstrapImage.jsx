@@ -1,11 +1,11 @@
 import React from "react";
 import { CardImg } from "reactstrap";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import { Link } from "react-router-dom";
 
 
 
 class ReactstrapImageGallery extends React.Component{
- 
   render(){
   const images = this.props.images
 
@@ -13,16 +13,18 @@ class ReactstrapImageGallery extends React.Component{
     <div className="pt-2 pl-3 pr-3">
       <ResponsiveMasonry  
         columnsCountBreakPoints={{350: 2, 750: 2, 900: 4}}>
-          
+             
                 <Masonry>
                   {
+                    
                     images.map((image, index) => (
-                      
-                    <CardImg key={index} className="p-1 d-block" src={image.largeImageURL} />
+                    <Link key={index} to={{pathname: `/${image.type}/${image.id}/${image.id}`, state:{image}}}>
+                    <CardImg className="p-1 d-block" src={image.largeImageURL} />
+                    </Link>
                     ))
                   }
                 </Masonry>
-               
+              
             </ResponsiveMasonry>
     </div>
 

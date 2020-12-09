@@ -19,6 +19,7 @@ const SearchInput = () => {
       .then(response => setImages(response.data.hits))
       .catch(err => console.log(err ))
       console.log(`fetching ${images.length} for you`)
+      console.log(images)
 
   }
 
@@ -49,21 +50,19 @@ const SearchInput = () => {
 
         {/* input button for home page goes here */}
         <Input
-          className={styles.inputfield} 
+          className="font-weight-normal text-capitalize" 
           name="searchText"
           value={searchText}
           placeholder="Search For Images"
           onChange={handleTextChange}
         />
 
-        <InputGroupButtonDropdown  
-           value={values}
-           onChange={handleDropDown}
+        <InputGroupButtonDropdown        
            addonType="append"
            isOpen={dropdownOpen}
            toggle={toggleDropDown}>
 
-          <DropdownToggle color="dark" caret>
+          <DropdownToggle value={values}  onChange={handleDropDown} color="dark" caret>
            All
           </DropdownToggle>
 

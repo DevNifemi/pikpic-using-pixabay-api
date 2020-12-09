@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/header/header';
 import HomeBackground from '../../components/home-background';
 import HomepageGallery from '../../components/homepage-image-gallery/index';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import {  Container } from 'reactstrap';
 
 class HomePage extends Component {
@@ -13,11 +13,11 @@ class HomePage extends Component {
       <HomeBackground/>
       <HomepageGallery/>
       <div className="mb-2">
-        <Link to="/image-result">
+        {/* <Link to="/image-result"> */}
           <button href="/image-result" className='button'>     
             Discover More
           </button>
-        </Link>
+        {/* </Link> */}
         </div>
         
           <div>
