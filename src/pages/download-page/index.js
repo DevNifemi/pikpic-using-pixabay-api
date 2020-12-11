@@ -11,7 +11,7 @@ const DownloadPage = () => {
       <Header/>
         {/* <ImageResultHeader/> */}
         <img src={image} alt="clicked"/>
-        <h1>Welcome, Download here lorem Ips</h1>
+        <h1>Welcome, Download here</h1>
     </div>
   );
 }

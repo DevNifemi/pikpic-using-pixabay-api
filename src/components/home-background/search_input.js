@@ -28,11 +28,7 @@ const SearchInput = () => {
       setValues(value)
   }
 
-  // API FOR PICTURE IS BEING CALLED HERE
-  const handleClick = (e) => {
-         
-  }
-
+  
 
   return (
     <div>

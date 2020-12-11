@@ -10,9 +10,9 @@ const Header = (props) => {
     <React.Fragment>
 
       {/* Header goes here */}
-            <title>Pik a pic</title>
-            <link rel="icon" href="/logo_transparent.png" style={{height: 500, width: 300}}/>
-            <div>
+    <title>Pik a pic</title>
+    <link rel="icon" href="/logo_transparent.png" style={{height: 500, width: 300}}/>
+    <div>
       <Navbar  color="light" light expand="md">
         <NavbarBrand style={{ height: '50px'}} className="mr-4" href="/">
             <img style={{width: 100, height: 100, marginTop: '-30px'}} src="/logo_transparent.png" alt="logo"/>

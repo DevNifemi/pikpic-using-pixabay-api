@@ -30,12 +30,13 @@ const ImageResult = () => {
       )
 
     } else {
-        return(
+        return (
           <div  className="mt4" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
             <img alt="oops" style={{ height:300, width: 300, marginTop: 150}} src={image}/> <br/>
            <div className="text-center text-danger pl-1 pr-1" style={{fontSize: 25}}> 
            Unable to get images you searched for! Please try again...</div>
-          </div>)
+          </div>
+          )
     }
 
   }

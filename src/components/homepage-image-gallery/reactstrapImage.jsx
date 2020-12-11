@@ -16,7 +16,6 @@ class ReactstrapImageGallery extends React.Component{
              
                 <Masonry>
                   {
-                    
                     images.map((image, index) => (
                     <Link key={index} to={{pathname: `/${image.type}/${image.id}/${image.id}`, state:{image}}}>
                     <CardImg className="p-1 d-block" src={image.largeImageURL} />
