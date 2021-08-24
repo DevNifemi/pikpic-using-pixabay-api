@@ -18,3 +18,21 @@
   border-radius: 20px;
   color: rgb(174, 187, 173);
 }
+
+
+.download-image{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.image-card{
+  display: block;
+  margin: 20px auto;
+  background-color: aliceblue;
+  padding: 1.3em;
+  width: fit-content;
+  height: fit-content;
+  border-radius: .5em;
+}

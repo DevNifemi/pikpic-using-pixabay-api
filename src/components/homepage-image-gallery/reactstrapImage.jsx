@@ -13,11 +13,11 @@ class ReactstrapImageGallery extends React.Component{
     <div className="pt-2 pl-3 pr-3">
       <ResponsiveMasonry  
         columnsCountBreakPoints={{350: 2, 750: 2, 900: 4}}>
-             
+          
                 <Masonry>
                   {
                     images.map((image, index) => (
-                    <Link key={index} to={{pathname: `/${image.type}/${image.id}/${image.id}`, state:{image}}}>
+                    <Link key={index} to={{pathname: `/photo/${image.largeImageURL.substr(24)}`}}>
                     <CardImg className="p-1 d-block" src={image.largeImageURL} />
                     </Link>
                     ))

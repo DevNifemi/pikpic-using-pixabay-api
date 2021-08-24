@@ -15,6 +15,8 @@ export default class HomepageGallery extends Component {
     };
   }
 
+
+  // fetch home page images 
   componentDidMount(){
       axios.get(`${apiUrl}/?key=${apiKey}&image_type=photo&per_page=${this.state.imagesOnPage}`)
       .then(response => this.setState({images:response.data.hits}));
@@ -22,10 +24,14 @@ export default class HomepageGallery extends Component {
 
   render() {
     const {images} = this.state;
+
+
     return (
+
       <div className='mt-3'>
         <ReactstrapImageGallery images={images} />
       </div>
+
     );
   }
 }

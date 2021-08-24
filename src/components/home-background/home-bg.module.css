@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 .hero {
-    /* background-image: url(https://res.cloudinary.com/nifemi/image/upload/v1605323723/bird-763769_1920_pcktfd.jpg); */
     background-image: url(https://res.cloudinary.com/nifemi/image/upload/v1605323723/bird-763769_1920_pcktfd.jpg);
     position: relative;
     background-position: 50%;
@@ -28,9 +27,10 @@
 }
 
 .hero h1{
-    font-size: 45px;
-    font-family: 'Rubik', sans-serif !important;
+    font-size: 55px;
+    font-family: 'Jost', sans-serif !important;
     font-weight: bolder;
+    margin-top: -20px;
 }
 
 .hero h2{
@@ -42,16 +42,17 @@
     max-width: 900px;
     position: relative;
     padding: 0 50px;
-    margin: 20px auto 50px;
+    margin: 25px auto 50px;
 }
-
+p{
+    z-index: 99999;
+}
 
 
 @media screen and (max-width: 405px){
     .hero h1{
         font-weight: bolder;
         font-size: 30px;
-        font-family: 'Rubik', sans-serif !important;
         margin-top: -150px;
     }
     .hero h2 {

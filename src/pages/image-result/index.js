@@ -2,7 +2,7 @@ import React from 'react';
 import ImageResultHeader from '../../components/image-result/image-header'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import {CardImg} from "reactstrap";
-import {useLocation} from 'react-router-dom';
+import {useLocation, Link} from 'react-router-dom';
 import image from '../../assets/images/404-error-3060993_1280.png'
 
 const ImageResult = () => {
@@ -20,7 +20,9 @@ const ImageResult = () => {
                 <Masonry>
                   {
                     images.map((image, index) => (
-                    <CardImg key={index} className="p-1 d-block" src={image.largeImageURL} />
+                    <Link  key={index} to={{pathname: `/photo/${image.largeImageURL.substr(24)}`}}>
+                     <CardImg className="p-1 d-block" src={image.largeImageURL} />
+                    </Link>
                     ))
                   }
                 </Masonry>

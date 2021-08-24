@@ -13,9 +13,9 @@ const SearchInput = () => {
   const [values, setValues] = useState('')
 
   // handle the click for search inputs
-  const handleTextChange = (e) => {
+  const handleTextChange = async(e) => {
      setSearchText(e.target.value)
-     axios.get(`${apiUrl }/?key=${apiKey}&q=${searchText}&image_type=${values}&per_page=100`)
+     await axios.get(`${apiUrl }/?key=${apiKey}&q=${searchText}&image_type=${values}&per_page=100`)
       .then(response => setImages(response.data.hits))
       .catch(err => console.log(err ))
       console.log(`fetching ${images.length} for you`)
@@ -33,15 +33,17 @@ const SearchInput = () => {
   return (
     <div>
       <InputGroup className={styles.input_container}>
+
       <InputGroupAddon color="dark" addonType="prepend">
 
         <Link to={{pathname: "/image-result",
          state: {images}}}>
            
           <Button className="bx bx-search-alt solid"
-            onClick={handleClick} to="image-result">
+          to="image-result">
           </Button>
         </Link>
+        
       </InputGroupAddon>
 
         {/* input button for home page goes here */}
